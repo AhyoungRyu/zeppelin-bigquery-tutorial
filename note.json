@@ -1,0 +1,349 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md \n\n## BigQuery Interpreter Tutorial \n\n### What is Google BigQuery? \n\n - BigQuery Official Website: [https://cloud.google.com/bigquery/what-is-bigquery](https://cloud.google.com/bigquery/what-is-bigquery)\n - 구글 빅데이타 플랫폼 빅쿼리 소개(Terry Cho님 블로그): [http://bcho.tistory.com/1116](http://bcho.tistory.com/1116)  ",
+      "dateUpdated": "Oct 20, 2016 3:19:00 PM",
+      "config": {
+        "tableHide": false,
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1476944340251_2132634017",
+      "id": "20161020-115750_911936829",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eBigQuery Interpreter Tutorial\u003c/h2\u003e\n\u003ch3\u003eWhat is Google BigQuery?\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eBigQuery Official Website: \u003ca href\u003d\"https://cloud.google.com/bigquery/what-is-bigquery\"\u003ehttps://cloud.google.com/bigquery/what-is-bigquery\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e구글 빅데이타 플랫폼 빅쿼리 소개(Terry Cho님 블로그): \u003ca href\u003d\"http://bcho.tistory.com/1116\"\u003ehttp://bcho.tistory.com/1116\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n"
+      },
+      "dateCreated": "Oct 20, 2016 3:19:00 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n\n### Zepplin에서 BigQuery 인터프리터 사용하기\n\n[BigQuery interpreter for Apache Zeppelin](https://zeppelin.apache.org/docs/0.7.0-SNAPSHOT/interpreter/bigquery.html)\n\n1. Zeppelin 인터프리터 셋팅 페이지에서 BigQuery 인터프리터 찾기\n이때 “bigquery”라는 이름이 너무 길다면 “bq” 라는 이름으로 하나 새로 만들어도 됩니다. 이미 만들어진 인터프리터의 이름은 다시 수정할 수 없으니 새로 만들어야 합니다.\n\n2. BigQuery 인터프리터 속성값 변경\n\n    - `zeppelin.bigquery.max_no_of_rows` : 100000(default value)\n    - `zeppelin.bigquery.project_id` : zeppelin-bigquery(Google project name made by Ahyoung)\n    - `zeppelin.bigquery.wait_time` : 5000(default value)\n\n3. Google Cloud Engine 외부에서 BigQuery를 사용하고 싶다면 별도의 키 파일 필요\n[여기](https://storage.cloud.google.com/zeppelin-bigquery.appspot.com/Zeppelin-BigQuery-45cf31935e7c.json?_ga\u003d1.110889029.1143943407.1464977016)를 클릭해서 다운받으세요.\n\n4. Zeppelin 환경 파일 수정\n\n    ZEPPELIN_HOME/conf/zeppelin-env.sh에 아래 환경변수 추가 \n    ```\n    export GOOGLE_APPLICATION_CREDENTIALS\u003d“/download_path/Zeppelin-BigQuery-45cf31935e7c.json” \n    ```\n    \n    zeppelin-env.sh 파일이 없다면\n    ```\n    $ cd conf/\n    $ cp zeppelin-env.sh.template zeppelin-env.sh\n    ```",
+      "dateUpdated": "Oct 20, 2016 3:19:00 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1476944340252_2130710272",
+      "id": "20161020-134534_52518450",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch3\u003eZepplin에서 BigQuery 인터프리터 사용하기\u003c/h3\u003e\n\u003cp\u003e\u003ca href\u003d\"https://zeppelin.apache.org/docs/0.7.0-SNAPSHOT/interpreter/bigquery.html\"\u003eBigQuery interpreter for Apache Zeppelin\u003c/a\u003e\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\u003cp\u003eZeppelin 인터프리터 셋팅 페이지에서 BigQuery 인터프리터 찾기\n\u003cbr  /\u003e이때 “bigquery”라는 이름이 너무 길다면 “bq” 라는 이름으로 하나 새로 만들어도 됩니다. 이미 만들어진 인터프리터의 이름은 다시 수정할 수 없으니 새로 만들어야 합니다.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eBigQuery 인터프리터 속성값 변경\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003ezeppelin.bigquery.max_no_of_rows\u003c/code\u003e : 100000(default value)\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003ezeppelin.bigquery.project_id\u003c/code\u003e : zeppelin-bigquery(Google project name made by Ahyoung)\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003ezeppelin.bigquery.wait_time\u003c/code\u003e : 5000(default value)\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eGoogle Cloud Engine 외부에서 BigQuery를 사용하고 싶다면 별도의 키 파일 필요\n\u003cbr  /\u003e\u003ca href\u003d\"https://storage.cloud.google.com/zeppelin-bigquery.appspot.com/Zeppelin-BigQuery-45cf31935e7c.json?_ga\u003d1.110889029.1143943407.1464977016\"\u003e여기\u003c/a\u003e를 클릭해서 다운받으세요.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003cp\u003eZeppelin 환경 파일 수정\u003c/p\u003e\n\u003cp\u003eZEPPELIN_HOME/conf/zeppelin-env.sh에 아래 환경변수 추가\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eexport GOOGLE_APPLICATION_CREDENTIALS\u003d“/download_path/Zeppelin-BigQuery-45cf31935e7c.json” \n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003ezeppelin-env.sh 파일이 없다면\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e$ cd conf/\n$ cp zeppelin-env.sh.template zeppelin-env.sh\n\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n"
+      },
+      "dateCreated": "Oct 20, 2016 3:19:00 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%bigquery\n\nSELECT * FROM [zeppelin-bigquery:bank.bank] LIMIT 1000",
+      "dateUpdated": "Oct 20, 2016 3:19:00 PM",
+      "config": {
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1476944340253_2130325523",
+      "id": "20161019-125227_1184709321",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "age\tjob\tmarital\teducation\tdefault\tbalance\t\n22\tadmin.\tsingle\tsecondary\tno\t4111\t\n23\tadmin.\tsingle\tsecondary\tno\t5\t\n23\tadmin.\tsingle\tsecondary\tno\t589\t\n24\tadmin.\tmarried\tsecondary\tno\t299\t\n24\tadmin.\tsingle\tsecondary\tno\t926\t\n25\tadmin.\tsingle\tsecondary\tno\t4590\t\n25\tadmin.\tsingle\ttertiary\tno\t760\t\n25\tadmin.\tmarried\tsecondary\tno\t18\t\n25\tadmin.\tmarried\tsecondary\tno\t894\t\n25\tadmin.\tmarried\tsecondary\tno\t242\t\n25\tadmin.\tsingle\ttertiary\tno\t1420\t\n25\tadmin.\tsingle\ttertiary\tno\t220\t\n26\tadmin.\tsingle\tsecondary\tno\t255\t\n26\tadmin.\tsingle\tsecondary\tno\t443\t\n26\tadmin.\tsingle\ttertiary\tno\t3672\t\n26\tadmin.\tmarried\tsecondary\tno\t0\t\n26\tadmin.\tsingle\tsecondary\tno\t236\t\n26\tadmin.\tsingle\tsecondary\tno\t96\t\n26\tadmin.\tdivorced\tsecondary\tyes\t-3\t\n26\tadmin.\tmarried\ttertiary\tno\t2855\t\n26\tadmin.\tmarried\tsecondary\tno\t2469\t\n26\tadmin.\tsingle\tsecondary\tno\t321\t\n26\tadmin.\tsingle\tsecondary\tno\t802\t\n26\tadmin.\tsingle\tsecondary\tno\t3529\t\n26\tadmin.\tsingle\tsecondary\tno\t609\t\n27\tadmin.\tdivorced\tsecondary\tno\t451\t\n27\tadmin.\tmarried\tsecondary\tno\t-247\t\n27\tadmin.\tsingle\tsecondary\tno\t619\t\n27\tadmin.\tmarried\tsecondary\tno\t1033\t\n27\tadmin.\tsingle\tsecondary\tno\t15\t\n27\tadmin.\tmarried\tsecondary\tno\t639\t\n27\tadmin.\tmarried\tsecondary\tno\t710\t\n27\tadmin.\tsingle\ttertiary\tno\t73\t\n27\tadmin.\tsingle\tsecondary\tno\t3638\t\n27\tadmin.\tsingle\tsecondary\tno\t-145\t\n27\tadmin.\tmarried\tsecondary\tno\t132\t\n27\tadmin.\tmarried\tsecondary\tyes\t-517\t\n27\tadmin.\tsingle\ttertiary\tno\t3672\t\n27\tadmin.\tmarried\tsecondary\tno\t897\t\n27\tadmin.\tdivorced\tsecondary\tno\t76\t\n27\tadmin.\tmarried\tsecondary\tno\t186\t\n28\tadmin.\tsingle\tsecondary\tno\t177\t\n28\tadmin.\tsingle\tunknown\tno\t174\t\n28\tadmin.\tsingle\tsecondary\tno\t26\t\n28\tadmin.\tmarried\tsecondary\tno\t-97\t\n28\tadmin.\tsingle\tsecondary\tno\t89\t\n28\tadmin.\tsingle\tsecondary\tno\t1323\t\n28\tadmin.\tsingle\tsecondary\tno\t775\t\n28\tadmin.\tsingle\tsecondary\tno\t4745\t\n28\tadmin.\tsingle\ttertiary\tno\t14\t\n28\tadmin.\tsingle\tsecondary\tno\t189\t\n28\tadmin.\tmarried\tsecondary\tno\t934\t\n28\tadmin.\tmarried\tsecondary\tno\t12\t\n29\tadmin.\tsingle\tsecondary\tno\t428\t\n29\tadmin.\tsingle\tsecondary\tno\t1448\t\n29\tadmin.\tsingle\tsecondary\tno\t-194\t\n29\tadmin.\tsingle\tsecondary\tno\t3432\t\n29\tadmin.\tsingle\tsecondary\tno\t1992\t\n29\tadmin.\tsingle\tsecondary\tno\t1117\t\n29\tadmin.\tsingle\ttertiary\tno\t14\t\n29\tadmin.\tmarried\tsecondary\tno\t22171\t\n29\tadmin.\tsingle\tsecondary\tno\t1070\t\n30\tadmin.\tsingle\ttertiary\tno\t261\t\n30\tadmin.\tsingle\tsecondary\tno\t239\t\n30\tadmin.\tsingle\tsecondary\tno\t-635\t\n30\tadmin.\tsingle\tsecondary\tno\t81\t\n30\tadmin.\tmarried\tsecondary\tno\t11\t\n30\tadmin.\tmarried\tsecondary\tno\t0\t\n30\tadmin.\tmarried\tsecondary\tno\t122\t\n30\tadmin.\tmarried\tsecondary\tno\t518\t\n30\tadmin.\tmarried\tsecondary\tno\t124\t\n30\tadmin.\tsingle\tsecondary\tno\t105\t\n30\tadmin.\tsingle\tsecondary\tno\t1009\t\n30\tadmin.\tmarried\tsecondary\tno\t2678\t\n30\tadmin.\tsingle\tsecondary\tno\t127\t\n30\tadmin.\tsingle\ttertiary\tno\t305\t\n30\tadmin.\tsingle\tsecondary\tno\t3809\t\n30\tadmin.\tmarried\ttertiary\tno\t0\t\n30\tadmin.\tmarried\ttertiary\tno\t400\t\n31\tadmin.\tdivorced\tsecondary\tno\t1890\t\n31\tadmin.\tsingle\tsecondary\tno\t2104\t\n31\tadmin.\tmarried\tsecondary\tno\t236\t\n31\tadmin.\tmarried\tsecondary\tno\t88\t\n31\tadmin.\tmarried\tsecondary\tno\t314\t\n31\tadmin.\tmarried\tsecondary\tno\t0\t\n31\tadmin.\tdivorced\tsecondary\tno\t1210\t\n31\tadmin.\tsingle\tsecondary\tno\t144\t\n31\tadmin.\tsingle\tsecondary\tno\t1306\t\n31\tadmin.\tmarried\tsecondary\tno\t0\t\n31\tadmin.\tsingle\tsecondary\tno\t-449\t\n31\tadmin.\tsingle\tsecondary\tno\t747\t\n31\tadmin.\tmarried\tsecondary\tno\t2304\t\n31\tadmin.\tmarried\tsecondary\tno\t212\t\n31\tadmin.\tsingle\tsecondary\tno\t1588\t\n31\tadmin.\tmarried\tsecondary\tno\t389\t\n31\tadmin.\tmarried\tsecondary\tno\t0\t\n31\tadmin.\tmarried\tsecondary\tno\t0\t\n31\tadmin.\tsingle\tsecondary\tno\t68\t\n31\tadmin.\tsingle\tsecondary\tno\t757\t\n31\tadmin.\tmarried\tprimary\tno\t355\t\n31\tadmin.\tsingle\tsecondary\tno\t-407\t\n31\tadmin.\tsingle\tsecondary\tno\t5527\t\n31\tadmin.\tmarried\tsecondary\tno\t5\t\n31\tadmin.\tdivorced\tsecondary\tno\t360\t\n31\tadmin.\tmarried\tsecondary\tno\t3\t\n31\tadmin.\tsingle\tsecondary\tno\t223\t\n32\tadmin.\tmarried\tsecondary\tno\t1031\t\n32\tadmin.\tsingle\tsecondary\tno\t739\t\n32\tadmin.\tmarried\ttertiary\tno\t0\t\n32\tadmin.\tsingle\tsecondary\tno\t2817\t\n32\tadmin.\tdivorced\tsecondary\tyes\t5\t\n32\tadmin.\tsingle\tsecondary\tno\t116\t\n32\tadmin.\tsingle\ttertiary\tno\t-59\t\n32\tadmin.\tsingle\tsecondary\tno\t45\t\n32\tadmin.\tmarried\tsecondary\tno\t923\t\n32\tadmin.\tsingle\ttertiary\tno\t1583\t\n32\tadmin.\tdivorced\tsecondary\tyes\t-18\t\n32\tadmin.\tsingle\tsecondary\tno\t1649\t\n32\tadmin.\tmarried\tsecondary\tno\t0\t\n32\tadmin.\tsingle\tsecondary\tno\t10218\t\n32\tadmin.\tsingle\tsecondary\tno\t92\t\n32\tadmin.\tsingle\tsecondary\tno\t678\t\n32\tadmin.\tmarried\tsecondary\tno\t3540\t\n32\tadmin.\tmarried\tsecondary\tno\t76\t\n32\tadmin.\tmarried\tsecondary\tno\t0\t\n32\tadmin.\tsingle\tsecondary\tno\t620\t\n33\tadmin.\tmarried\tsecondary\tno\t1158\t\n33\tadmin.\tmarried\tsecondary\tno\t-6\t\n33\tadmin.\tmarried\ttertiary\tno\t640\t\n33\tadmin.\tmarried\tsecondary\tno\t4902\t\n33\tadmin.\tmarried\ttertiary\tno\t69\t\n33\tadmin.\tmarried\tsecondary\tno\t353\t\n33\tadmin.\tsingle\tsecondary\tno\t-300\t\n33\tadmin.\tsingle\ttertiary\tno\t490\t\n33\tadmin.\tdivorced\tsecondary\tno\t661\t\n33\tadmin.\tsingle\ttertiary\tno\t621\t\n33\tadmin.\tmarried\tsecondary\tno\t220\t\n33\tadmin.\tsingle\tsecondary\tno\t2557\t\n33\tadmin.\tmarried\ttertiary\tno\t79\t\n33\tadmin.\tmarried\tsecondary\tno\t0\t\n33\tadmin.\tmarried\tsecondary\tno\t95\t\n33\tadmin.\tdivorced\tsecondary\tno\t818\t\n33\tadmin.\tsingle\tsecondary\tno\t894\t\n34\tadmin.\tsingle\tsecondary\tno\t6979\t\n34\tadmin.\tmarried\ttertiary\tno\t899\t\n34\tadmin.\tsingle\tsecondary\tno\t1\t\n34\tadmin.\tmarried\ttertiary\tno\t69\t\n34\tadmin.\tmarried\tsecondary\tno\t244\t\n34\tadmin.\tmarried\tsecondary\tno\t613\t\n34\tadmin.\tsingle\tsecondary\tno\t663\t\n34\tadmin.\tmarried\ttertiary\tno\t35\t\n34\tadmin.\tsingle\tsecondary\tno\t852\t\n34\tadmin.\tmarried\tsecondary\tno\t1499\t\n34\tadmin.\tsingle\tsecondary\tno\t846\t\n34\tadmin.\tsingle\tprimary\tno\t0\t\n34\tadmin.\tmarried\tsecondary\tno\t247\t\n34\tadmin.\tmarried\ttertiary\tno\t2552\t\n34\tadmin.\tmarried\tsecondary\tno\t1671\t\n34\tadmin.\tmarried\tsecondary\tno\t475\t\n34\tadmin.\tsingle\tsecondary\tno\t10\t\n34\tadmin.\tmarried\tsecondary\tno\t50\t\n34\tadmin.\tmarried\tsecondary\tno\t96\t\n34\tadmin.\tdivorced\tsecondary\tno\t479\t\n34\tadmin.\tmarried\tsecondary\tno\t79\t\n34\tadmin.\tmarried\tsecondary\tno\t2374\t\n34\tadmin.\tmarried\tsecondary\tno\t61\t\n34\tadmin.\tmarried\tsecondary\tno\t645\t\n34\tadmin.\tmarried\tsecondary\tno\t5320\t\n34\tadmin.\tmarried\tsecondary\tno\t396\t\n34\tadmin.\tmarried\ttertiary\tno\t37\t\n34\tadmin.\tsingle\ttertiary\tno\t18\t\n34\tadmin.\tsingle\tsecondary\tno\t296\t\n34\tadmin.\tdivorced\tsecondary\tno\t1268\t\n34\tadmin.\tdivorced\tsecondary\tno\t-251\t\n35\tadmin.\tdivorced\tsecondary\tno\t-402\t\n35\tadmin.\tmarried\tprimary\tno\t189\t\n35\tadmin.\tsingle\ttertiary\tno\t62\t\n35\tadmin.\tmarried\ttertiary\tno\t0\t\n35\tadmin.\tsingle\tsecondary\tno\t2830\t\n35\tadmin.\tdivorced\tsecondary\tno\t148\t\n35\tadmin.\tsingle\tsecondary\tno\t0\t\n35\tadmin.\tmarried\tsecondary\tno\t0\t\n35\tadmin.\tsingle\tsecondary\tno\t57\t\n35\tadmin.\tdivorced\tsecondary\tno\t3636\t\n35\tadmin.\tmarried\tsecondary\tno\t0\t\n35\tadmin.\tmarried\tsecondary\tno\t725\t\n35\tadmin.\tmarried\tsecondary\tno\t786\t\n35\tadmin.\tsingle\tsecondary\tno\t847\t\n35\tadmin.\tmarried\tsecondary\tyes\t0\t\n35\tadmin.\tmarried\tsecondary\tno\t0\t\n35\tadmin.\tdivorced\ttertiary\tno\t1555\t\n35\tadmin.\tmarried\ttertiary\tno\t1145\t\n35\tadmin.\tmarried\tsecondary\tno\t147\t\n35\tadmin.\tsingle\tsecondary\tno\t1810\t\n35\tadmin.\tmarried\tsecondary\tno\t8652\t\n36\tadmin.\tmarried\tsecondary\tno\t470\t\n36\tadmin.\tmarried\tunknown\tno\t2323\t\n36\tadmin.\tsingle\tsecondary\tno\t0\t\n36\tadmin.\tmarried\tsecondary\tno\t-423\t\n36\tadmin.\tdivorced\tsecondary\tno\t356\t\n36\tadmin.\tsingle\tsecondary\tno\t1281\t\n36\tadmin.\tsingle\ttertiary\tno\t980\t\n36\tadmin.\tmarried\tsecondary\tno\t957\t\n36\tadmin.\tmarried\tsecondary\tno\t725\t\n36\tadmin.\tmarried\tsecondary\tno\t0\t\n36\tadmin.\tsingle\tsecondary\tno\t47\t\n36\tadmin.\tdivorced\tsecondary\tno\t-37\t\n36\tadmin.\tsingle\tsecondary\tno\t1927\t\n36\tadmin.\tmarried\tsecondary\tno\t465\t\n36\tadmin.\tmarried\tsecondary\tno\t998\t\n36\tadmin.\tmarried\tsecondary\tno\t4280\t\n36\tadmin.\tsingle\tsecondary\tno\t319\t\n37\tadmin.\tsingle\ttertiary\tno\t2317\t\n37\tadmin.\tmarried\tsecondary\tno\t176\t\n37\tadmin.\tmarried\ttertiary\tno\t0\t\n37\tadmin.\tmarried\tsecondary\tno\t121\t\n37\tadmin.\tdivorced\ttertiary\tno\t4303\t\n37\tadmin.\tmarried\tsecondary\tno\t1314\t\n37\tadmin.\tmarried\tsecondary\tno\t11303\t\n37\tadmin.\tmarried\ttertiary\tno\t3913\t\n37\tadmin.\tmarried\tsecondary\tno\t1193\t\n37\tadmin.\tsingle\tsecondary\tno\t781\t\n37\tadmin.\tsingle\tsecondary\tno\t0\t\n37\tadmin.\tsingle\tsecondary\tno\t-296\t\n37\tadmin.\tmarried\tsecondary\tno\t1123\t\n37\tadmin.\tmarried\tsecondary\tno\t7\t\n37\tadmin.\tmarried\tsecondary\tno\t-107\t\n37\tadmin.\tmarried\ttertiary\tno\t801\t\n37\tadmin.\tmarried\ttertiary\tno\t0\t\n37\tadmin.\tmarried\tsecondary\tno\t749\t\n38\tadmin.\tmarried\tsecondary\tno\t424\t\n38\tadmin.\tsingle\tsecondary\tno\t902\t\n38\tadmin.\tmarried\ttertiary\tno\t605\t\n38\tadmin.\tmarried\tsecondary\tno\t3190\t\n38\tadmin.\tmarried\tprimary\tno\t3913\t\n38\tadmin.\tmarried\tsecondary\tno\t1852\t\n38\tadmin.\tmarried\ttertiary\tno\t1988\t\n38\tadmin.\tmarried\ttertiary\tno\t669\t\n38\tadmin.\tmarried\tsecondary\tno\t3732\t\n38\tadmin.\tsingle\tsecondary\tno\t-23\t\n38\tadmin.\tmarried\tsecondary\tno\t46\t\n38\tadmin.\tsingle\tsecondary\tno\t883\t\n38\tadmin.\tmarried\ttertiary\tno\t1980\t\n38\tadmin.\tmarried\tprimary\tno\t0\t\n38\tadmin.\tdivorced\tsecondary\tno\t156\t\n38\tadmin.\tdivorced\ttertiary\tno\t86\t\n38\tadmin.\tmarried\tsecondary\tno\t4196\t\n39\tadmin.\tsingle\tsecondary\tno\t1242\t\n39\tadmin.\tdivorced\tsecondary\tno\t2903\t\n39\tadmin.\tsingle\tsecondary\tno\t14\t\n39\tadmin.\tdivorced\tsecondary\tno\t399\t\n39\tadmin.\tsingle\tunknown\tno\t0\t\n39\tadmin.\tmarried\tsecondary\tno\t179\t\n39\tadmin.\tmarried\tsecondary\tno\t406\t\n39\tadmin.\tmarried\tsecondary\tno\t260\t\n39\tadmin.\tsingle\ttertiary\tno\t2600\t\n39\tadmin.\tmarried\tsecondary\tno\t-650\t\n39\tadmin.\tdivorced\tsecondary\tno\t1022\t\n39\tadmin.\tmarried\tsecondary\tno\t607\t\n39\tadmin.\tdivorced\tsecondary\tno\t83\t\n39\tadmin.\tmarried\ttertiary\tno\t722\t\n39\tadmin.\tsingle\tsecondary\tno\t163\t\n40\tadmin.\tsingle\tsecondary\tno\t462\t\n40\tadmin.\tdivorced\tsecondary\tno\t6\t\n40\tadmin.\tsingle\tsecondary\tno\t2378\t\n40\tadmin.\tmarried\tsecondary\tno\t168\t\n40\tadmin.\tsingle\tsecondary\tno\t100\t\n40\tadmin.\tdivorced\tsecondary\tno\t212\t\n40\tadmin.\tsingle\tsecondary\tno\t-1\t\n40\tadmin.\tmarried\tsecondary\tno\t0\t\n40\tadmin.\tmarried\tsecondary\tno\t1327\t\n40\tadmin.\tsingle\tsecondary\tno\t1670\t\n40\tadmin.\tsingle\tsecondary\tno\t263\t\n41\tadmin.\tmarried\ttertiary\tno\t5426\t\n41\tadmin.\tsingle\tsecondary\tno\t-256\t\n41\tadmin.\tmarried\tsecondary\tno\t920\t\n41\tadmin.\tsingle\tsecondary\tno\t1020\t\n41\tadmin.\tmarried\tsecondary\tno\t2993\t\n41\tadmin.\tmarried\tsecondary\tno\t5110\t\n41\tadmin.\tdivorced\tsecondary\tno\t6046\t\n41\tadmin.\tmarried\tprimary\tno\t-306\t\n41\tadmin.\tdivorced\tsecondary\tno\t3823\t\n41\tadmin.\tmarried\tsecondary\tno\t8238\t\n41\tadmin.\tsingle\tsecondary\tno\t748\t\n41\tadmin.\tsingle\ttertiary\tno\t982\t\n41\tadmin.\tdivorced\tsecondary\tno\t1088\t\n41\tadmin.\tmarried\tsecondary\tno\t4539\t\n41\tadmin.\tsingle\tsecondary\tno\t400\t\n41\tadmin.\tdivorced\tsecondary\tno\t-365\t\n41\tadmin.\tmarried\ttertiary\tno\t1287\t\n41\tadmin.\tmarried\tsecondary\tno\t21515\t\n41\tadmin.\tmarried\tsecondary\tno\t0\t\n41\tadmin.\tmarried\ttertiary\tno\t1536\t\n42\tadmin.\tdivorced\tsecondary\tno\t1811\t\n42\tadmin.\tmarried\tsecondary\tno\t323\t\n42\tadmin.\tdivorced\tsecondary\tno\t63\t\n42\tadmin.\tmarried\tsecondary\tno\t-396\t\n42\tadmin.\tdivorced\tsecondary\tno\t1076\t\n42\tadmin.\tsingle\tsecondary\tno\t1022\t\n42\tadmin.\tmarried\tsecondary\tno\t3165\t\n42\tadmin.\tdivorced\tsecondary\tno\t936\t\n42\tadmin.\tsingle\tsecondary\tno\t243\t\n42\tadmin.\tmarried\tsecondary\tno\t214\t\n42\tadmin.\tmarried\tsecondary\tno\t0\t\n42\tadmin.\tmarried\tsecondary\tno\t529\t\n42\tadmin.\tmarried\tsecondary\tno\t4209\t\n42\tadmin.\tsingle\tsecondary\tno\t30\t\n42\tadmin.\tsingle\tsecondary\tno\t-247\t\n42\tadmin.\tmarried\tunknown\tno\t642\t\n43\tadmin.\tmarried\tsecondary\tno\t264\t\n43\tadmin.\tmarried\tsecondary\tno\t-465\t\n43\tadmin.\tdivorced\tsecondary\tno\t738\t\n43\tadmin.\tmarried\tsecondary\tno\t132\t\n43\tadmin.\tmarried\tsecondary\tno\t0\t\n43\tadmin.\tmarried\tunknown\tno\t3485\t\n43\tadmin.\tmarried\tsecondary\tno\t3215\t\n44\tadmin.\tmarried\tsecondary\tno\t5181\t\n44\tadmin.\tmarried\tsecondary\tno\t0\t\n44\tadmin.\tmarried\tsecondary\tno\t262\t\n44\tadmin.\tmarried\tsecondary\tno\t205\t\n44\tadmin.\tmarried\tsecondary\tno\t2403\t\n44\tadmin.\tsingle\tsecondary\tno\t2524\t\n44\tadmin.\tdivorced\tsecondary\tno\t432\t\n44\tadmin.\tsingle\tsecondary\tno\t-101\t\n45\tadmin.\tmarried\tunknown\tno\t1783\t\n45\tadmin.\tmarried\tsecondary\tno\t5346\t\n45\tadmin.\tsingle\tsecondary\tno\t0\t\n45\tadmin.\tmarried\tsecondary\tno\t204\t\n45\tadmin.\tmarried\tsecondary\tno\t638\t\n45\tadmin.\tsingle\tsecondary\tno\t-11\t\n45\tadmin.\tdivorced\tsecondary\tno\t0\t\n45\tadmin.\tmarried\tsecondary\tno\t0\t\n45\tadmin.\tmarried\tsecondary\tno\t-388\t\n45\tadmin.\tmarried\tsecondary\tno\t644\t\n45\tadmin.\tmarried\tprimary\tno\t542\t\n45\tadmin.\tmarried\tsecondary\tno\t295\t\n45\tadmin.\tmarried\tunknown\tno\t2033\t\n45\tadmin.\tmarried\tsecondary\tno\t72\t\n45\tadmin.\tmarried\tsecondary\tno\t248\t\n45\tadmin.\tdivorced\tunknown\tno\t998\t\n45\tadmin.\tmarried\tsecondary\tno\t194\t\n45\tadmin.\tmarried\tsecondary\tno\t-547\t\n45\tadmin.\tdivorced\tsecondary\tno\t59\t\n46\tadmin.\tmarried\tsecondary\tno\t179\t\n46\tadmin.\tmarried\tsecondary\tno\t22\t\n46\tadmin.\tmarried\tsecondary\tno\t3098\t\n46\tadmin.\tmarried\tsecondary\tno\t1069\t\n46\tadmin.\tdivorced\tsecondary\tno\t2232\t\n46\tadmin.\tmarried\tsecondary\tno\t368\t\n46\tadmin.\tsingle\tsecondary\tno\t751\t\n46\tadmin.\tmarried\tsecondary\tno\t70\t\n46\tadmin.\tmarried\tsecondary\tno\t4958\t\n46\tadmin.\tmarried\tsecondary\tno\t-121\t\n46\tadmin.\tmarried\tsecondary\tno\t22\t\n46\tadmin.\tsingle\tsecondary\tno\t1693\t\n46\tadmin.\tdivorced\tsecondary\tno\t7378\t\n46\tadmin.\tmarried\tsecondary\tno\t0\t\n46\tadmin.\tmarried\tsecondary\tno\t120\t\n46\tadmin.\tmarried\tsecondary\tno\t556\t\n46\tadmin.\tmarried\tprimary\tno\t276\t\n46\tadmin.\tmarried\tprimary\tno\t96\t\n46\tadmin.\tsingle\tsecondary\tno\t1790\t\n46\tadmin.\tmarried\tsecondary\tno\t466\t\n47\tadmin.\tmarried\tsecondary\tno\t1060\t\n47\tadmin.\tmarried\tsecondary\tno\t2\t\n47\tadmin.\tsingle\tsecondary\tno\t3696\t\n47\tadmin.\tmarried\tsecondary\tno\t1934\t\n47\tadmin.\tdivorced\tsecondary\tno\t225\t\n47\tadmin.\tmarried\tsecondary\tno\t104\t\n47\tadmin.\tdivorced\tsecondary\tno\t162\t\n47\tadmin.\tmarried\tsecondary\tno\t310\t\n47\tadmin.\tdivorced\tsecondary\tno\t136\t\n47\tadmin.\tsingle\tsecondary\tno\t1544\t\n47\tadmin.\tdivorced\tsecondary\tno\t1139\t\n47\tadmin.\tmarried\tsecondary\tno\t3676\t\n47\tadmin.\tsingle\tsecondary\tno\t2540\t\n48\tadmin.\tmarried\tsecondary\tno\t3064\t\n48\tadmin.\tmarried\tunknown\tno\t0\t\n48\tadmin.\tsingle\tsecondary\tno\t1150\t\n48\tadmin.\tdivorced\tsecondary\tno\t4099\t\n48\tadmin.\tmarried\tsecondary\tno\t112\t\n48\tadmin.\tmarried\tprimary\tno\t607\t\n48\tadmin.\tmarried\tsecondary\tno\t8\t\n48\tadmin.\tmarried\tsecondary\tno\t292\t\n48\tadmin.\tdivorced\tunknown\tno\t-70\t\n48\tadmin.\tmarried\tsecondary\tno\t191\t\n48\tadmin.\tmarried\tsecondary\tno\t5\t\n49\tadmin.\tmarried\tsecondary\tno\t2465\t\n49\tadmin.\tmarried\tsecondary\tno\t635\t\n49\tadmin.\tmarried\tsecondary\tno\t197\t\n49\tadmin.\tsingle\tsecondary\tno\t981\t\n49\tadmin.\tmarried\tprimary\tno\t169\t\n49\tadmin.\tmarried\tsecondary\tno\t13229\t\n49\tadmin.\tmarried\tsecondary\tno\t0\t\n49\tadmin.\tmarried\tsecondary\tno\t381\t\n49\tadmin.\tmarried\tsecondary\tno\t14440\t\n49\tadmin.\tmarried\tsecondary\tno\t3608\t\n50\tadmin.\tmarried\tprimary\tno\t276\t\n50\tadmin.\tmarried\tsecondary\tno\t231\t\n50\tadmin.\tdivorced\tsecondary\tno\t202\t\n50\tadmin.\tmarried\tsecondary\tno\t0\t\n50\tadmin.\tdivorced\tsecondary\tno\t1111\t\n50\tadmin.\tdivorced\tsecondary\tno\t769\t\n51\tadmin.\tsingle\ttertiary\tno\t16\t\n51\tadmin.\tdivorced\tsecondary\tno\t340\t\n51\tadmin.\tmarried\tsecondary\tno\t2662\t\n51\tadmin.\tdivorced\tsecondary\tno\t467\t\n51\tadmin.\tmarried\tsecondary\tno\t2967\t\n51\tadmin.\tmarried\tsecondary\tno\t423\t\n51\tadmin.\tmarried\tsecondary\tno\t1415\t\n52\tadmin.\tmarried\tsecondary\tno\t2347\t\n52\tadmin.\tsingle\tprimary\tno\t0\t\n52\tadmin.\tmarried\tsecondary\tno\t0\t\n52\tadmin.\tmarried\tsecondary\tno\t693\t\n52\tadmin.\tmarried\tsecondary\tno\t199\t\n52\tadmin.\tmarried\tsecondary\tno\t395\t\n52\tadmin.\tsingle\tunknown\tno\t2227\t\n52\tadmin.\tdivorced\tsecondary\tno\t98\t\n53\tadmin.\tmarried\tsecondary\tno\t105\t\n53\tadmin.\tmarried\tsecondary\tno\t1796\t\n53\tadmin.\tsingle\tsecondary\tno\t1178\t\n53\tadmin.\tsingle\tsecondary\tno\t2398\t\n53\tadmin.\tmarried\tsecondary\tno\t263\t\n53\tadmin.\tmarried\tsecondary\tno\t225\t\n53\tadmin.\tdivorced\tsecondary\tno\t0\t\n53\tadmin.\tmarried\tsecondary\tno\t459\t\n53\tadmin.\tdivorced\tsecondary\tno\t26\t\n53\tadmin.\tmarried\tsecondary\tno\t459\t\n54\tadmin.\tmarried\tsecondary\tno\t0\t\n54\tadmin.\tmarried\tsecondary\tno\t865\t\n55\tadmin.\tmarried\tsecondary\tno\t602\t\n55\tadmin.\tmarried\tprimary\tno\t343\t\n55\tadmin.\tmarried\tsecondary\tno\t0\t\n55\tadmin.\tmarried\tsecondary\tno\t865\t\n55\tadmin.\tmarried\tsecondary\tno\t865\t\n55\tadmin.\tmarried\tsecondary\tno\t1102\t\n56\tadmin.\tmarried\tsecondary\tno\t16873\t\n56\tadmin.\tmarried\tsecondary\tno\t0\t\n56\tadmin.\tdivorced\tsecondary\tyes\t-435\t\n56\tadmin.\tmarried\tunknown\tno\t2038\t\n56\tadmin.\tdivorced\tsecondary\tno\t985\t\n56\tadmin.\tdivorced\tprimary\tno\t0\t\n56\tadmin.\tmarried\tsecondary\tno\t2146\t\n56\tadmin.\tmarried\tsecondary\tno\t1270\t\n56\tadmin.\tmarried\tsecondary\tno\t45\t\n56\tadmin.\tdivorced\tunknown\tno\t789\t\n56\tadmin.\tdivorced\tsecondary\tno\t3337\t\n56\tadmin.\tmarried\tsecondary\tno\t1504\t\n57\tadmin.\tdivorced\tunknown\tno\t887\t\n57\tadmin.\tdivorced\tprimary\tno\t1\t\n57\tadmin.\tdivorced\tunknown\tno\t4012\t\n57\tadmin.\tmarried\tsecondary\tno\t808\t\n57\tadmin.\tmarried\tsecondary\tno\t3927\t\n57\tadmin.\tmarried\ttertiary\tno\t46\t\n57\tadmin.\tmarried\tsecondary\tno\t367\t\n57\tadmin.\tdivorced\tprimary\tno\t179\t\n57\tadmin.\tmarried\tsecondary\tno\t169\t\n57\tadmin.\tmarried\tsecondary\tno\t-967\t\n57\tadmin.\tmarried\tsecondary\tno\t2137\t\n58\tadmin.\tmarried\tsecondary\tno\t2\t\n58\tadmin.\tmarried\tsecondary\tno\t1142\t\n58\tadmin.\tsingle\tsecondary\tno\t2223\t\n58\tadmin.\tmarried\tsecondary\tno\t3496\t\n59\tadmin.\tmarried\tsecondary\tno\t817\t\n59\tadmin.\tdivorced\tsecondary\tno\t975\t\n59\tadmin.\tmarried\tsecondary\tno\t92\t\n59\tadmin.\tmarried\tsecondary\tno\t2381\t\n59\tadmin.\tdivorced\tsecondary\tno\t174\t\n60\tadmin.\tdivorced\tsecondary\tno\t174\t\n60\tadmin.\tmarried\tsecondary\tno\t1025\t\n60\tadmin.\tmarried\tsecondary\tno\t-396\t\n60\tadmin.\tmarried\tunknown\tno\t1088\t\n60\tadmin.\tmarried\tsecondary\tno\t3735\t\n60\tadmin.\tmarried\tsecondary\tno\t3043\t\n60\tadmin.\tmarried\tsecondary\tno\t2552\t\n61\tadmin.\tmarried\tunknown\tno\t4629\t\n61\tadmin.\tmarried\tsecondary\tno\t4608\t\n66\tadmin.\tsingle\tsecondary\tno\t10177\t\n24\tretired\tsingle\tsecondary\tno\t366\t\n35\tretired\tmarried\tprimary\tno\t285\t\n36\tretired\tsingle\tsecondary\tno\t101\t\n38\tretired\tsingle\tunknown\tno\t62\t\n41\tretired\tsingle\tprimary\tno\t0\t\n42\tretired\tsingle\ttertiary\tno\t308\t\n43\tretired\tmarried\tsecondary\tno\t520\t\n46\tretired\tmarried\tprimary\tno\t-35\t\n48\tretired\tmarried\tprimary\tyes\t-285\t\n48\tretired\tmarried\tprimary\tno\t5173\t\n49\tretired\tsingle\tprimary\tno\t25824\t\n49\tretired\tmarried\tprimary\tno\t-37\t\n49\tretired\tmarried\tprimary\tno\t1672\t\n51\tretired\tmarried\tsecondary\tno\t35\t\n51\tretired\tdivorced\tsecondary\tno\t343\t\n51\tretired\tdivorced\tsecondary\tno\t1679\t\n52\tretired\tdivorced\tprimary\tno\t353\t\n52\tretired\tmarried\tsecondary\tno\t424\t\n52\tretired\tmarried\tsecondary\tno\t603\t\n52\tretired\tsingle\tsecondary\tno\t316\t\n53\tretired\tmarried\ttertiary\tno\t-22\t\n53\tretired\tmarried\tsecondary\tno\t665\t\n53\tretired\tmarried\tsecondary\tno\t4968\t\n53\tretired\tdivorced\tsecondary\tyes\t-200\t\n53\tretired\tmarried\tsecondary\tno\t6095\t\n53\tretired\tmarried\tsecondary\tno\t1278\t\n54\tretired\tmarried\tprimary\tno\t0\t\n54\tretired\tmarried\tsecondary\tno\t3671\t\n54\tretired\tdivorced\ttertiary\tno\t6102\t\n54\tretired\tdivorced\ttertiary\tno\t0\t\n54\tretired\tmarried\tsecondary\tno\t1139\t\n54\tretired\tmarried\tsecondary\tno\t153\t\n54\tretired\tdivorced\tprimary\tno\t22\t\n54\tretired\tmarried\tprimary\tno\t208\t\n55\tretired\tdivorced\tsecondary\tno\t138\t\n55\tretired\tmarried\tprimary\tno\t8894\t\n55\tretired\tmarried\tprimary\tno\t3334\t\n55\tretired\tmarried\tsecondary\tno\t466\t\n55\tretired\tmarried\tprimary\tno\t4424\t\n55\tretired\tmarried\ttertiary\tno\t197\t\n55\tretired\tmarried\tprimary\tno\t150\t\n55\tretired\tmarried\tprimary\tno\t-966\t\n55\tretired\tdivorced\tsecondary\tno\t1580\t\n55\tretired\tmarried\tsecondary\tno\t168\t\n55\tretired\tmarried\tsecondary\tno\t1467\t\n55\tretired\tmarried\tsecondary\tno\t2749\t\n55\tretired\tmarried\tsecondary\tno\t4194\t\n55\tretired\tmarried\tsecondary\tno\t159\t\n56\tretired\tmarried\tsecondary\tno\t344\t\n56\tretired\tmarried\tprimary\tno\t1906\t\n56\tretired\tmarried\tsecondary\tno\t-1206\t\n56\tretired\tmarried\tsecondary\tno\t1333\t\n56\tretired\tmarried\ttertiary\tno\t478\t\n56\tretired\tmarried\tsecondary\tno\t1044\t\n56\tretired\tmarried\tsecondary\tno\t-113\t\n56\tretired\tdivorced\tsecondary\tno\t212\t\n56\tretired\tdivorced\tprimary\tno\t694\t\n56\tretired\tmarried\tsecondary\tno\t3948\t\n56\tretired\tmarried\tprimary\tno\t-1\t\n57\tretired\tdivorced\tsecondary\tno\t39\t\n57\tretired\tmarried\tprimary\tno\t5799\t\n57\tretired\tmarried\tsecondary\tno\t374\t\n57\tretired\tmarried\tprimary\tno\t808\t\n57\tretired\tmarried\ttertiary\tno\t0\t\n57\tretired\tmarried\tprimary\tno\t2927\t\n57\tretired\tmarried\tsecondary\tno\t0\t\n57\tretired\tmarried\tsecondary\tyes\t32\t\n57\tretired\tmarried\tsecondary\tno\t523\t\n57\tretired\tmarried\tprimary\tno\t1623\t\n57\tretired\tmarried\tprimary\tno\t1238\t\n57\tretired\tmarried\tprimary\tno\t75\t\n57\tretired\tmarried\ttertiary\tno\t1180\t\n57\tretired\tmarried\ttertiary\tno\t0\t\n57\tretired\tdivorced\tsecondary\tno\t-331\t\n57\tretired\tmarried\tsecondary\tno\t49\t\n57\tretired\tmarried\tprimary\tno\t-464\t\n57\tretired\tmarried\tunknown\tno\t1621\t\n57\tretired\tmarried\tsecondary\tno\t1044\t\n57\tretired\tmarried\ttertiary\tno\t31\t\n57\tretired\tmarried\tsecondary\tno\t107\t\n58\tretired\tmarried\tprimary\tno\t3401\t\n58\tretired\tmarried\tunknown\tno\t937\t\n58\tretired\tdivorced\ttertiary\tno\t264\t\n58\tretired\tmarried\tsecondary\tno\t225\t\n58\tretired\tdivorced\tprimary\tno\t2538\t\n58\tretired\tdivorced\tunknown\tno\t5920\t\n58\tretired\tsingle\tsecondary\tno\t1640\t\n58\tretired\tmarried\tsecondary\tno\t235\t\n58\tretired\tmarried\tsecondary\tno\t425\t\n58\tretired\tmarried\tsecondary\tno\t502\t\n58\tretired\tmarried\tsecondary\tno\t983\t\n58\tretired\tsingle\tprimary\tno\t6570\t\n58\tretired\tmarried\tprimary\tno\t4007\t\n58\tretired\tmarried\tsecondary\tno\t11\t\n58\tretired\tmarried\tprimary\tno\t0\t\n58\tretired\tmarried\tsecondary\tno\t413\t\n58\tretired\tmarried\tsecondary\tno\t764\t\n58\tretired\tmarried\tprimary\tno\t1987\t\n58\tretired\tmarried\tprimary\tno\t565\t\n58\tretired\tmarried\tsecondary\tno\t35\t\n58\tretired\tmarried\tprimary\tno\t5092\t\n58\tretired\tmarried\tsecondary\tno\t14412\t\n58\tretired\tmarried\tsecondary\tno\t3382\t\n59\tretired\tmarried\ttertiary\tno\t9676\t\n59\tretired\tmarried\tprimary\tno\t0\t\n59\tretired\tmarried\tunknown\tno\t1033\t\n59\tretired\tmarried\tsecondary\tno\t163\t\n59\tretired\tmarried\tprimary\tno\t1427\t\n59\tretired\tmarried\tsecondary\tno\t1173\t\n59\tretired\tdivorced\tsecondary\tno\t5845\t\n59\tretired\tsingle\tsecondary\tno\t351\t\n59\tretired\tmarried\tprimary\tno\t-47\t\n59\tretired\tdivorced\tprimary\tno\t7179\t\n59\tretired\tmarried\tsecondary\tno\t0\t\n59\tretired\tmarried\tsecondary\tno\t319\t\n59\tretired\tmarried\tsecondary\tno\t9976\t\n59\tretired\tmarried\tunknown\tno\t0\t\n59\tretired\tmarried\tprimary\tno\t46\t\n59\tretired\tdivorced\tsecondary\tno\t1026\t\n59\tretired\tdivorced\tsecondary\tno\t319\t\n59\tretired\tmarried\tsecondary\tno\t5706\t\n59\tretired\tmarried\tprimary\tno\t0\t\n59\tretired\tmarried\tsecondary\tno\t0\t\n60\tretired\tmarried\tprimary\tno\t5\t\n60\tretired\tmarried\tprimary\tno\t55\t\n60\tretired\tdivorced\tunknown\tno\t-49\t\n60\tretired\tmarried\tsecondary\tno\t4820\t\n60\tretired\tmarried\tprimary\tno\t71\t\n60\tretired\tmarried\tsecondary\tno\t262\t\n60\tretired\tmarried\tsecondary\tno\t197\t\n60\tretired\tmarried\tsecondary\tno\t89\t\n60\tretired\tmarried\tprimary\tno\t0\t\n60\tretired\tdivorced\tsecondary\tno\t598\t\n60\tretired\tmarried\tsecondary\tno\t78\t\n60\tretired\tmarried\tprimary\tno\t71188\t\n60\tretired\tmarried\ttertiary\tno\t225\t\n60\tretired\tdivorced\ttertiary\tno\t2131\t\n61\tretired\tmarried\tsecondary\tno\t5207\t\n61\tretired\tmarried\tsecondary\tno\t2917\t\n61\tretired\tmarried\tsecondary\tno\t313\t\n61\tretired\tmarried\tprimary\tno\t1060\t\n61\tretired\tmarried\tsecondary\tno\t76\t\n62\tretired\tmarried\tsecondary\tno\t816\t\n62\tretired\tdivorced\ttertiary\tno\t0\t\n63\tretired\tmarried\tsecondary\tno\t415\t\n63\tretired\tmarried\tprimary\tno\t1084\t\n63\tretired\tmarried\tsecondary\tno\t2747\t\n63\tretired\tmarried\ttertiary\tno\t133\t\n63\tretired\tmarried\tprimary\tno\t8044\t\n63\tretired\tmarried\tsecondary\tno\t474\t\n63\tretired\tdivorced\tsecondary\tno\t1490\t\n64\tretired\tmarried\tunknown\tno\t2923\t\n64\tretired\tmarried\tprimary\tno\t43\t\n64\tretired\tmarried\tsecondary\tno\t1574\t\n64\tretired\tdivorced\ttertiary\tno\t890\t\n64\tretired\tmarried\ttertiary\tno\t846\t\n65\tretired\tdivorced\tprimary\tno\t1840\t\n65\tretired\tdivorced\tunknown\tno\t300\t\n65\tretired\tmarried\tprimary\tno\t493\t\n66\tretired\tmarried\ttertiary\tno\t2262\t\n66\tretired\tmarried\tsecondary\tno\t4785\t\n66\tretired\tmarried\tprimary\tno\t747\t\n66\tretired\tmarried\tprimary\tno\t206\t\n66\tretired\tmarried\ttertiary\tno\t1948\t\n67\tretired\tmarried\tunknown\tno\t696\t\n67\tretired\tmarried\tprimary\tno\t2301\t\n67\tretired\tmarried\tunknown\tno\t696\t\n67\tretired\tmarried\ttertiary\tno\t701\t\n68\tretired\tdivorced\tsecondary\tno\t4189\t\n68\tretired\tmarried\tsecondary\tno\t19317\t\n69\tretired\tmarried\tprimary\tno\t579\t\n69\tretired\tmarried\ttertiary\tno\t473\t\n69\tretired\tmarried\tsecondary\tno\t745\t\n69\tretired\tmarried\tprimary\tno\t279\t\n69\tretired\tsingle\ttertiary\tno\t2144\t\n69\tretired\tmarried\tunknown\tno\t426\t\n70\tretired\tdivorced\tprimary\tno\t4531\t\n70\tretired\tmarried\tsecondary\tno\t2815\t\n70\tretired\tmarried\ttertiary\tno\t15834\t\n70\tretired\tmarried\tprimary\tno\t3782\t\n70\tretired\tmarried\tsecondary\tno\t1164\t\n70\tretired\tmarried\tsecondary\tno\t616\t\n70\tretired\tdivorced\tsecondary\tno\t6850\t\n71\tretired\tmarried\tprimary\tno\t4657\t\n71\tretired\tmarried\ttertiary\tno\t14220\t\n71\tretired\tmarried\tsecondary\tno\t2850\t\n71\tretired\tdivorced\ttertiary\tno\t261\t\n72\tretired\tmarried\tprimary\tno\t796\t\n72\tretired\tmarried\tprimary\tno\t763\t\n72\tretired\tmarried\tsecondary\tno\t4130\t\n73\tretired\tmarried\tprimary\tno\t1388\t\n73\tretired\tmarried\tprimary\tno\t154\t\n73\tretired\tmarried\tprimary\tno\t796\t\n73\tretired\tmarried\tsecondary\tno\t19\t\n73\tretired\tmarried\tprimary\tno\t279\t\n73\tretired\tmarried\tunknown\tno\t519\t\n74\tretired\tdivorced\tsecondary\tno\t4079\t\n74\tretired\tmarried\tsecondary\tno\t935\t\n74\tretired\tmarried\tsecondary\tno\t921\t\n75\tretired\tmarried\tsecondary\tno\t3771\t\n75\tretired\tdivorced\ttertiary\tno\t3810\t\n75\tretired\tdivorced\tsecondary\tno\t1341\t\n75\tretired\tdivorced\tprimary\tno\t852\t\n75\tretired\tmarried\tsecondary\tno\t26452\t\n76\tretired\tdivorced\tprimary\tno\t86\t\n76\tretired\tmarried\tprimary\tno\t2590\t\n77\tretired\tdivorced\ttertiary\tno\t4659\t\n77\tretired\tmarried\ttertiary\tno\t7802\t\n77\tretired\tmarried\tsecondary\tno\t610\t\n77\tretired\tmarried\ttertiary\tno\t0\t\n77\tretired\tmarried\tprimary\tno\t680\t\n77\tretired\tmarried\tprimary\tno\t680\t\n78\tretired\tdivorced\tprimary\tno\t229\t\n78\tretired\tmarried\ttertiary\tno\t226\t\n79\tretired\tmarried\tsecondary\tno\t4738\t\n79\tretired\tmarried\tprimary\tno\t8556\t\n79\tretired\tmarried\tprimary\tno\t429\t\n79\tretired\tdivorced\tunknown\tno\t2628\t\n80\tretired\tmarried\tsecondary\tno\t8304\t\n80\tretired\tmarried\tsecondary\tno\t8304\t\n80\tretired\tmarried\tsecondary\tno\t462\t\n80\tretired\tmarried\tprimary\tno\t1548\t\n81\tretired\tmarried\tsecondary\tno\t1\t\n83\tretired\tmarried\tsecondary\tno\t0\t\n83\tretired\tmarried\tprimary\tno\t425\t\n83\tretired\tdivorced\tprimary\tno\t0\t\n83\tretired\tdivorced\tprimary\tno\t1097\t\n84\tretired\tdivorced\tprimary\tno\t639\t\n86\tretired\tmarried\tsecondary\tno\t1503\t\n87\tretired\tmarried\tprimary\tno\t230\t\n19\tstudent\tsingle\tprimary\tno\t103\t\n19\tstudent\tsingle\tunknown\tno\t0\t\n19\tstudent\tsingle\tsecondary\tno\t302\t\n19\tstudent\tsingle\tunknown\tno\t1169\t\n20\tstudent\tsingle\tsecondary\tno\t502\t\n20\tstudent\tsingle\tsecondary\tno\t291\t\n20\tstudent\tsingle\tsecondary\tno\t1191\t\n21\tstudent\tsingle\tsecondary\tno\t2488\t\n21\tstudent\tsingle\tsecondary\tno\t681\t\n21\tstudent\tsingle\tunknown\tno\t137\t\n21\tstudent\tsingle\tsecondary\tno\t6\t\n21\tstudent\tsingle\tsecondary\tno\t6844\t\n22\tstudent\tsingle\ttertiary\tno\t1161\t\n22\tstudent\tsingle\tunknown\tno\t549\t\n22\tstudent\tsingle\tunknown\tno\t47\t\n22\tstudent\tsingle\tprimary\tno\t3472\t\n22\tstudent\tsingle\tsecondary\tno\t2488\t\n22\tstudent\tsingle\ttertiary\tno\t691\t\n22\tstudent\tsingle\tsecondary\tno\t246\t\n23\tstudent\tsingle\tsecondary\tno\t9216\t\n23\tstudent\tsingle\tsecondary\tno\t780\t\n23\tstudent\tmarried\ttertiary\tyes\t-230\t\n23\tstudent\tsingle\tsecondary\tno\t8494\t\n23\tstudent\tsingle\tsecondary\tno\t1021\t\n24\tstudent\tsingle\tsecondary\tno\t508\t\n24\tstudent\tsingle\tsecondary\tno\t822\t\n24\tstudent\tsingle\tunknown\tno\t3298\t\n24\tstudent\tsingle\tsecondary\tno\t1847\t\n25\tstudent\tsingle\tsecondary\tno\t331\t\n25\tstudent\tsingle\tsecondary\tno\t1790\t\n25\tstudent\tsingle\tsecondary\tno\t1116\t\n25\tstudent\tmarried\ttertiary\tno\t0\t\n25\tstudent\tsingle\tsecondary\tno\t304\t\n25\tstudent\tsingle\tunknown\tno\t10788\t\n25\tstudent\tsingle\ttertiary\tno\t5\t\n25\tstudent\tsingle\ttertiary\tno\t1433\t\n25\tstudent\tsingle\tsecondary\tno\t8\t\n25\tstudent\tmarried\ttertiary\tno\t10\t\n26\tstudent\tsingle\tsecondary\tno\t2572\t\n26\tstudent\tsingle\tsecondary\tno\t279\t\n26\tstudent\tsingle\tsecondary\tno\t203\t\n26\tstudent\tsingle\ttertiary\tno\t294\t\n26\tstudent\tsingle\tsecondary\tno\t-147\t\n27\tstudent\tsingle\ttertiary\tno\t5291\t\n27\tstudent\tsingle\tsecondary\tno\t213\t\n27\tstudent\tsingle\tsecondary\tno\t1566\t\n27\tstudent\tsingle\tsecondary\tno\t671\t\n27\tstudent\tsingle\ttertiary\tno\t3733\t\n27\tstudent\tsingle\ttertiary\tno\t118\t\n27\tstudent\tsingle\tsecondary\tno\t268\t\n27\tstudent\tsingle\ttertiary\tno\t-148\t\n27\tstudent\tsingle\tsecondary\tno\t8366\t\n28\tstudent\tsingle\tsecondary\tno\t378\t\n28\tstudent\tsingle\tsecondary\tno\t11555\t\n28\tstudent\tsingle\tsecondary\tno\t459\t\n28\tstudent\tsingle\ttertiary\tno\t1562\t\n28\tstudent\tsingle\ttertiary\tno\t0\t\n28\tstudent\tsingle\tsecondary\tno\t0\t\n28\tstudent\tsingle\tsecondary\tno\t153\t\n28\tstudent\tsingle\tsecondary\tno\t28\t\n28\tstudent\tsingle\tsecondary\tno\t330\t\n29\tstudent\tsingle\tsecondary\tno\t872\t\n29\tstudent\tsingle\tunknown\tno\t2929\t\n29\tstudent\tsingle\tunknown\tno\t145\t\n30\tstudent\tsingle\tsecondary\tno\t3096\t\n30\tstudent\tsingle\ttertiary\tno\t34\t\n30\tstudent\tsingle\tsecondary\tno\t4\t\n30\tstudent\tsingle\tsecondary\tno\t0\t\n30\tstudent\tsingle\ttertiary\tno\t7513\t\n30\tstudent\tsingle\tsecondary\tno\t25\t\n31\tstudent\tsingle\ttertiary\tno\t64\t\n32\tstudent\tsingle\ttertiary\tno\t0\t\n32\tstudent\tmarried\tsecondary\tno\t1694\t\n33\tstudent\tsingle\tunknown\tno\t5969\t\n34\tstudent\tsingle\tunknown\tno\t1281\t\n34\tstudent\tmarried\tunknown\tno\t1387\t\n35\tstudent\tsingle\tunknown\tno\t0\t\n36\tstudent\tsingle\tunknown\tno\t386\t\n37\tstudent\tmarried\tunknown\tno\t0\t\n38\tstudent\tsingle\ttertiary\tno\t807\t\n40\tstudent\tmarried\tsecondary\tno\t260\t\n40\tstudent\tmarried\tsecondary\tno\t260\t\n41\tstudent\tmarried\tsecondary\tno\t1309\t\n42\tstudent\tmarried\tunknown\tno\t-7\t\n27\tunknown\tsingle\ttertiary\tno\t6421\t\n30\tunknown\tsingle\ttertiary\tno\t6836\t\n31\tunknown\tdivorced\ttertiary\tno\t137\t\n33\tunknown\tmarried\tsecondary\tno\t2727\t\n35\tunknown\tmarried\tprimary\tno\t365\t\n35\tunknown\tmarried\tprimary\tno\t634\t\n37\tunknown\tmarried\tunknown\tno\t1699\t\n38\tunknown\tsingle\ttertiary\tno\t0\t\n39\tunknown\tsingle\tsecondary\tno\t914\t\n41\tunknown\tsingle\ttertiary\tno\t1567\t\n43\tunknown\tsingle\tunknown\tno\t181\t\n43\tunknown\tmarried\ttertiary\tno\t1937\t\n43\tunknown\tsingle\ttertiary\tno\t2731\t\n44\tunknown\tmarried\tsecondary\tno\t2319\t\n45\tunknown\tmarried\tprimary\tno\t44\t\n47\tunknown\tmarried\tunknown\tno\t677\t\n48\tunknown\tmarried\tunknown\tno\t286\t\n49\tunknown\tmarried\tunknown\tno\t301\t\n49\tunknown\tmarried\tsecondary\tno\t0\t\n50\tunknown\tmarried\tunknown\tno\t558\t\n50\tunknown\tmarried\tprimary\tno\t341\t\n52\tunknown\tmarried\tsecondary\tno\t142\t\n52\tunknown\tmarried\tunknown\tno\t1317\t\n52\tunknown\tmarried\tprimary\tno\t247\t\n53\tunknown\tmarried\tunknown\tno\t13\t\n53\tunknown\tmarried\tprimary\tno\t732\t\n54\tunknown\tmarried\tsecondary\tno\t2206\t\n54\tunknown\tmarried\tunknown\tno\t2508\t\n54\tunknown\tmarried\tunknown\tno\t895\t\n54\tunknown\tmarried\tsecondary\tno\t1157\t\n55\tunknown\tmarried\tprimary\tno\t159\t\n56\tunknown\tmarried\tunknown\tno\t0\t\n59\tunknown\tmarried\tunknown\tno\t3940\t\n60\tunknown\tmarried\tunknown\tno\t7337\t\n62\tunknown\tmarried\tsecondary\tno\t367\t\n65\tunknown\tmarried\tunknown\tno\t300\t\n65\tunknown\tmarried\tunknown\tno\t4717\t\n71\tunknown\tmarried\ttertiary\tno\t353\t\n21\tservices\tsingle\tsecondary\tno\t361\t\n21\tservices\tsingle\tsecondary\tno\t1903\t\n23\tservices\tsingle\ttertiary\tno\t363\t\n23\tservices\tmarried\tsecondary\tno\t-19\t\n23\tservices\tsingle\tsecondary\tno\t500\t\n23\tservices\tsingle\tsecondary\tno\t250\t\n24\tservices\tmarried\tsecondary\tno\t4500\t\n24\tservices\tmarried\ttertiary\tno\t0\t\n24\tservices\tmarried\tsecondary\tyes\t110\t\n25\tservices\tsingle\tsecondary\tno\t402\t\n25\tservices\tsingle\tsecondary\tno\t3217\t\n25\tservices\tmarried\tsecondary\tno\t72\t\n25\tservices\tsingle\tsecondary\tno\t-352\t\n25\tservices\tsingle\tsecondary\tno\t368\t\n25\tservices\tsingle\tsecondary\tno\t64\t\n26\tservices\tdivorced\tsecondary\tno\t74\t\n26\tservices\tsingle\tsecondary\tno\t127\t\n26\tservices\tsingle\tsecondary\tno\t512\t\n26\tservices\tsingle\tsecondary\tno\t0\t\n26\tservices\tsingle\tsecondary\tno\t50\t\n26\tservices\tsingle\tsecondary\tyes\t-162\t\n26\tservices\tsingle\tsecondary\tno\t209\t\n26\tservices\tsingle\tsecondary\tno\t1347\t\n26\tservices\tsingle\tsecondary\tno\t5533\t\n26\tservices\tsingle\tsecondary\tno\t1700\t\n26\tservices\tsingle\tsecondary\tno\t256\t\n27\tservices\tsingle\tsecondary\tno\t-195\t\n27\tservices\tsingle\tsecondary\tno\t468\t\n27\tservices\tmarried\tsecondary\tno\t0\t\n27\tservices\tmarried\tsecondary\tno\t58\t\n27\tservices\tsingle\tsecondary\tno\t-151\t\n27\tservices\tsingle\tsecondary\tno\t201\t\n27\tservices\tmarried\tsecondary\tno\t54\t\n27\tservices\tsingle\tsecondary\tno\t-124\t\n27\tservices\tsingle\tsecondary\tno\t795\t\n27\tservices\tsingle\tsecondary\tno\t261\t\n27\tservices\tmarried\tsecondary\tno\t100\t\n27\tservices\tsingle\tsecondary\tno\t0\t\n27\tservices\tsingle\tsecondary\tno\t54\t\n27\tservices\tsingle\tsecondary\tno\t259\t\n27\tservices\tmarried\tsecondary\tno\t-1202\t\n27\tservices\tsingle\tsecondary\tno\t3354\t\n27\tservices\tdivorced\tsecondary\tno\t10\t\n27\tservices\tsingle\tsecondary\tno\t266\t\n27\tservices\tmarried\tsecondary\tno\t0\t\n27\tservices\tsingle\tsecondary\tyes\t-1\t\n28\tservices\tsingle\tsecondary\tno\t168\t\n28\tservices\tmarried\tsecondary\tno\t0\t\n28\tservices\tsingle\tsecondary\tno\t198\t\n28\tservices\tsingle\tsecondary\tno\t290\t\n28\tservices\tsingle\tsecondary\tno\t229\t\n28\tservices\tsingle\tsecondary\tno\t-427\t\n28\tservices\tsingle\tsecondary\tno\t2685\t\n28\tservices\tsingle\tsecondary\tno\t94\t\n28\tservices\tsingle\tsecondary\tno\t317\t\n29\tservices\tmarried\tsecondary\tno\t3\t\n29\tservices\tmarried\tsecondary\tno\t3748\t\n29\tservices\tdivorced\tsecondary\tno\t330\t\n29\tservices\tsingle\tsecondary\tno\t192\t\n29\tservices\tsingle\tsecondary\tno\t0\t\n29\tservices\tmarried\tsecondary\tno\t57\t\n29\tservices\tmarried\tsecondary\tno\t11417\t\n29\tservices\tmarried\tprimary\tno\t-102\t\n29\tservices\tmarried\tsecondary\tno\t308\t\n29\tservices\tmarried\tsecondary\tno\t182\t\n29\tservices\tdivorced\tsecondary\tno\t84\t\n29\tservices\tsingle\tsecondary\tno\t209\t\n29\tservices\tsingle\tsecondary\tno\t-287\t\n29\tservices\tsingle\tunknown\tno\t33\t\n29\tservices\tdivorced\tsecondary\tno\t92\t\n30\tservices\tmarried\tsecondary\tno\t1808\t\n30\tservices\tsingle\tsecondary\tno\t209\t\n30\tservices\tsingle\tsecondary\tno\t0\t\n30\tservices\tsingle\tsecondary\tno\t566\t\n30\tservices\tsingle\tsecondary\tno\t3485\t\n30\tservices\tmarried\tsecondary\tno\t1743\t\n30\tservices\tsingle\ttertiary\tno\t3516\t\n30\tservices\tsingle\tsecondary\tno\t432\t\n30\tservices\tsingle\ttertiary\tno\t-477\t\n30\tservices\tmarried\tsecondary\tno\t1286\t\n30\tservices\tmarried\ttertiary\tno\t1380\t\n30\tservices\tmarried\tsecondary\tno\t699\t\n30\tservices\tsingle\tsecondary\tno\t334\t\n30\tservices\tdivorced\tsecondary\tno\t0\t\n30\tservices\tmarried\tsecondary\tno\t0\t\n30\tservices\tsingle\tprimary\tno\t79\t\n30\tservices\tmarried\tsecondary\tno\t227\t\n30\tservices\tsingle\tsecondary\tno\t20\t\n30\tservices\tdivorced\tsecondary\tno\t-94\t\n31\tservices\tmarried\tsecondary\tno\t132\t\n31\tservices\tmarried\tsecondary\tno\t338\t\n31\tservices\tsingle\tsecondary\tno\t2070\t\n31\tservices\tmarried\tsecondary\tno\t413\t\n31\tservices\tmarried\tsecondary\tno\t428\t\n31\tservices\tsingle\tsecondary\tno\t0\t\n31\tservices\tmarried\tsecondary\tno\t1062\t\n31\tservices\tsingle\tsecondary\tno\t1987\t\n31\tservices\tmarried\tsecondary\tno\t-331\t\n31\tservices\tsingle\tsecondary\tno\t864\t\n31\tservices\tmarried\tsecondary\tno\t388\t\n31\tservices\tsingle\tsecondary\tno\t11386\t\n31\tservices\tsingle\tsecondary\tno\t469\t\n31\tservices\tsingle\tsecondary\tno\t85\t\n31\tservices\tmarried\tsecondary\tno\t440\t\n31\tservices\tmarried\ttertiary\tno\t309\t\n31\tservices\tmarried\tsecondary\tno\t500\t\n31\tservices\tmarried\tsecondary\tno\t-230\t\n31\tservices\tsingle\tsecondary\tno\t31\t\n31\tservices\tdivorced\tprimary\tno\t459\t\n31\tservices\tsingle\tsecondary\tno\t481\t\n32\tservices\tsingle\tsecondary\tno\t0\t\n32\tservices\tsingle\tsecondary\tno\t406\t\n32\tservices\tmarried\tprimary\tno\t228\t\n32\tservices\tsingle\tsecondary\tno\t182\t\n32\tservices\tsingle\tsecondary\tno\t2881\t\n32\tservices\tmarried\tsecondary\tno\t-632\t\n32\tservices\tsingle\tunknown\tno\t6145\t\n32\tservices\tmarried\tsecondary\tno\t255\t\n32\tservices\tmarried\tsecondary\tno\t401\t\n32\tservices\tmarried\tsecondary\tno\t55\t\n32\tservices\tsingle\tsecondary\tno\t-402\t\n32\tservices\tmarried\tsecondary\tno\t1464\t\n32\tservices\tmarried\tsecondary\tno\t132\t\n32\tservices\tmarried\tsecondary\tno\t180\t\n32\tservices\tmarried\ttertiary\tno\t4908\t\n32\tservices\tmarried\tsecondary\tno\t4885\t\n32\tservices\tmarried\tsecondary\tno\t38\t\n32\tservices\tsingle\tsecondary\tno\t152\t\n32\tservices\tmarried\tsecondary\tno\t162\t\n32\tservices\tmarried\tsecondary\tno\t61\t\n32\tservices\tsingle\tsecondary\tno\t2478\t\n32\tservices\tsingle\tsecondary\tno\t133\t\n32\tservices\tsingle\tsecondary\tno\t0\t\n32\tservices\tmarried\tsecondary\tyes\t-220\t\n32\tservices\tsingle\tsecondary\tno\t48\t\n32\tservices\tsingle\tsecondary\tno\t473\t\n33\tservices\tmarried\tsecondary\tno\t4789\t\n33\tservices\tdivorced\tsecondary\tno\t991\t\n33\tservices\tmarried\tsecondary\tno\t90\t\n33\tservices\tsingle\tsecondary\tno\t-56\t\n33\tservices\tdivorced\tsecondary\tno\t411\t\n33\tservices\tmarried\tsecondary\tno\t0\t\n33\tservices\tmarried\tsecondary\tno\t386\t\n33\tservices\tmarried\tsecondary\tno\t804\t\n33\tservices\tmarried\tsecondary\tno\t478\t\n33\tservices\tmarried\tprimary\tno\t6904\t\n33\tservices\tmarried\tprimary\tno\t0\t\n33\tservices\tdivorced\tsecondary\tno\t2411\t\n33\tservices\tsingle\tsecondary\tno\t358\t\n33\tservices\tmarried\tsecondary\tno\t210\t\n33\tservices\tmarried\tsecondary\tno\t288\t\n33\tservices\tmarried\tsecondary\tno\t-333\t\n34\tservices\tmarried\tsecondary\tno\t-62\t\n34\tservices\tmarried\tsecondary\tno\t586\t\n34\tservices\tmarried\tsecondary\tno\t1337\t\n34\tservices\tmarried\tsecondary\tno\t1076\t\n34\tservices\tsingle\tsecondary\tno\t84\t\n34\tservices\tdivorced\tsecondary\tno\t991\t\n34\tservices\tmarried\tsecondary\tno\t2211\t\n34\tservices\tdivorced\tsecondary\tno\t44\t\n34\tservices\tmarried\tsecondary\tno\t0\t\n34\tservices\tdivorced\tsecondary\tno\t202\t\n34\tservices\tmarried\tsecondary\tno\t0\t\n34\tservices\tmarried\tsecondary\tno\t-315\t\n35\tservices\tmarried\tsecondary\tno\t109\t\n35\tservices\tmarried\tsecondary\tno\t1453\t\n35\tservices\tdivorced\tsecondary\tno\t67\t\n35\tservices\tsingle\tsecondary\tno\t1063\t\n35\tservices\tmarried\tsecondary\tno\t819\t\n35\tservices\tmarried\tsecondary\tno\t195\t\n"
+      },
+      "dateCreated": "Oct 20, 2016 3:19:00 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%bigquery\n\nSELECT age, count(1) value\nFROM [zeppelin-bigquery:bank.bank] \nWHERE age \u003c 30 \nGROUP BY age \nORDER BY age",
+      "dateUpdated": "Oct 20, 2016 3:19:00 PM",
+      "config": {
+        "colWidth": 4.0,
+        "editorMode": "ace/mode/sql",
+        "helium": {},
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1476944340255_2131095021",
+      "id": "20161019-231152_995135731",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "age\tvalue\t\n19\t4\t\n20\t3\t\n21\t7\t\n22\t9\t\n23\t20\t\n24\t24\t\n25\t44\t\n26\t77\t\n27\t94\t\n28\t103\t\n29\t97\t\n"
+      },
+      "dateCreated": "Oct 20, 2016 3:19:00 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%bigquery\n\nSELECT age, count(1) value \nFROM [zeppelin-bigquery:bank.bank]  \nWHERE age \u003c ${maxAge\u003d30} \nGROUP by age \nORDER by age",
+      "dateUpdated": "Oct 20, 2016 3:19:00 PM",
+      "config": {
+        "colWidth": 4.0,
+        "editorMode": "ace/mode/sql",
+        "helium": {},
+        "graph": {
+          "mode": "pieChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {
+          "maxAge": "30"
+        },
+        "forms": {
+          "maxAge": {
+            "name": "maxAge",
+            "defaultValue": "30",
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1476944340255_2131095021",
+      "id": "20161020-011947_1505657794",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "age\tvalue\t\n19\t4\t\n20\t3\t\n21\t7\t\n22\t9\t\n23\t20\t\n24\t24\t\n25\t44\t\n26\t77\t\n27\t94\t\n28\t103\t\n29\t97\t\n"
+      },
+      "dateCreated": "Oct 20, 2016 3:19:00 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%bigquery\n\nSELECT age, count(1) value \nFROM [zeppelin-bigquery:bank.bank] \nWHERE marital\u003d\"${marital\u003dsingle,single|divorced|married}\" \nGROUP BY age \nORDER BY age",
+      "dateUpdated": "Oct 20, 2016 3:19:00 PM",
+      "config": {
+        "colWidth": 4.0,
+        "helium": {},
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {
+          "marital": "divorced"
+        },
+        "forms": {
+          "marital": {
+            "name": "marital",
+            "defaultValue": "single",
+            "options": [
+              {
+                "value": "single"
+              },
+              {
+                "value": "divorced"
+              },
+              {
+                "value": "married"
+              }
+            ],
+            "hidden": false
+          }
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1476944340256_2116859312",
+      "id": "20161020-011935_2077151700",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "age\tvalue\t\n26\t3\t\n27\t4\t\n28\t2\t\n29\t4\t\n30\t2\t\n31\t9\t\n32\t14\t\n33\t22\t\n34\t14\t\n35\t25\t\n36\t21\t\n37\t18\t\n38\t16\t\n39\t12\t\n40\t12\t\n41\t19\t\n42\t27\t\n43\t15\t\n44\t17\t\n45\t21\t\n46\t23\t\n47\t18\t\n48\t11\t\n49\t14\t\n50\t19\t\n51\t22\t\n52\t11\t\n53\t15\t\n54\t15\t\n55\t19\t\n56\t21\t\n57\t11\t\n58\t11\t\n59\t13\t\n60\t6\t\n61\t1\t\n62\t2\t\n63\t1\t\n64\t1\t\n65\t2\t\n68\t1\t\n70\t2\t\n71\t1\t\n74\t1\t\n75\t3\t\n76\t1\t\n77\t1\t\n78\t1\t\n79\t1\t\n83\t2\t\n84\t1\t\n"
+      },
+      "dateCreated": "Oct 20, 2016 3:19:00 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%bigquery\n",
+      "dateUpdated": "Oct 20, 2016 3:19:00 PM",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1476944340256_2116859312",
+      "id": "20161020-012219_1003518773",
+      "dateCreated": "Oct 20, 2016 3:19:00 PM",
+      "status": "READY",
+      "errorMessage": "",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Conference Materials/BigQuery example 1",
+  "id": "2BXNJGG2Z",
+  "angularObjects": {
+    "2BY9VEKVT:shared_process": [],
+    "2BY4SSS6H:shared_process": [],
+    "2BYMEGMJC:shared_process": [],
+    "2BWXA2NEW:shared_process": [],
+    "2BXXRUZX9:shared_process": [],
+    "2BY8NMV6F:shared_process": [],
+    "2BYTQBU3Z:shared_process": [],
+    "2C1TKN27M:shared_process": [],
+    "2BX1WF534:shared_process": [],
+    "2BYHV8GYU:shared_process": [],
+    "2BYDTSBHF:shared_process": [],
+    "2BXC5PPT1:shared_process": [],
+    "2BZSD23TZ:shared_process": [],
+    "2BYQYZYHZ:shared_process": [],
+    "2BZPZ4Y5H:shared_process": [],
+    "2BYSB8CKJ:shared_process": [],
+    "2C16KAXFJ:shared_process": [],
+    "2BZG3DJVA:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}
